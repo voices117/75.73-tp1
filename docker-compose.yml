@@ -1,6 +1,12 @@
 version: '2'
 
 services:
+    gunicorn:
+        build: ./py
+        
+    node:
+        build: ./js
+
     nginx:
         image: nginx:1.17.3
         ports:

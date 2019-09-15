@@ -6,4 +6,4 @@ WORKDIR /opt/app
 COPY app.py ./
 
 RUN pip install flask gunicorn
-ENTRYPOINT ["gunicorn", "app:app", "-b localhost:8000"]
+ENTRYPOINT ["gunicorn", "app:app", "-b 0.0.0.0:5555"]
