@@ -136,5 +136,8 @@ nginx como load balancer, como levantar mas instancias de Node o workers de Guni
   corrutinas están dormidas esperando algo, como un socket o lectura de disco). En este sentido, es posible que 
   gunicorn favorezca la escalabilidad (ya que es cuestión de cambiar los parametros de invocación). También creo que
   frente a Node es más *simple* y *mantenible* ya que no hay que estar pendiente de bloquear el event loop.
+  
   Por otra parte, *supestamente* (deberíamos verificar) Node es más "liviano" por tener el event loop y no hacer
-  tanto context swityching, por lo que debería consumir menos recursos (¿performance?).
+  tanto context switching, por lo que debería consumir menos recursos (¿performance?). En el caso de node tendriamos
+  que levantar varios containers corriendo el mismo proceso de node, como en teoria no consume tantos recursos, podriamos
+  levantar una cantidad considerable para atender los requests intensivos sin necesidad de tener maquinas de gama alta.
