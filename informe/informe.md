@@ -63,18 +63,18 @@ En este caso, es esperable que el sistema funcione sin degradación en sus 3 end
  - `/intensive`
 
 Esto se debe a que no hay requests compitiendo por los recursos y el servidor estará dedicado 100% a responderle
-a el único cliente.
+al único cliente.
 
 Este escenario es ideal para observar los parámetros normales de Node en el ambiente de pruebas.
 
 
 ### Node con concurrencia
 
-Este escenario es más interesante, ya que los clientes comienzan a competir por el servidor:
- - `/` debe responder nomalmente
- - `/timeout` no debe observarse una diferencia significativa por parte del cliente, ya que el event loop de node
-   se encarga de continuar procesando requests mientras que los demás "duermen".
- - `/intensive` cada requests bloquea el event loop de node impidiendo atender en forma simultánea a los demás.
+Este escenario es más interesante, ya que los clientes comienzan a competir por los recursos del servidor:
+ - `/` debería responder de forma similar al caso sin concurrencia ya que el tiempo de procesamiento es despreciable.
+ - `/timeout` no debería observarse una diferencia significativa por parte del cliente, ya que el event loop de node
+   se encarga de continuar procesando requests mientras que los demás "duermen" a la espera de que los workers completen las llamadas asincrónicas que se ejecutaron.
+ - `/intensive` cada request bloquea el event loop de node impidiendo atender en forma simultánea a los demás.
    Es por esto que se observará un incremento lineal del tiempo de respuesta con respecto a la cantidad de
    clientes. Esto es porque el N-ésimo cliente debe esperar a que finalicen los N-1 clientes anteriores.
 
