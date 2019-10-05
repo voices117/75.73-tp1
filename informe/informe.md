@@ -12,8 +12,8 @@ Atributos de calidad a analizar:
 
  - Performance: tiempo de respuesta y cantidad de requests que soporta el sistema.
  - Reliability: bajo que cargas el sistema funciona en la forma esperada.
- - Security: desde el punto de vista de la resistencia a un ataque DoS.
- - Scalability: habilidad de cada sistema para poder responder a una carga creciente.
+ - Availability: que tan dificil será tirar abajo el servicio completamente.
+ - Scalability: facilidad de cada sistema para poder responder a una carga creciente.
 
 
 ## Entorno utilizado para las pruebas (puse los datos de mi notebook pero podemos cambiarlos si lo hacemos en otro equipo)
@@ -45,13 +45,13 @@ MemTotal:       16356176 kB
 ## Performance
 
 En principio, se desea detectar los parámetros normales del sistema, es decir, los valores esperables en un
-escenario no estresante. Luego mediante de mayor intensidad se observará el comportamiento y la degradación
-del mismo (si es que hubiere).
+escenario no estresante. Luego, someterlo a una mayor intensidad de carga y observar el comportamiento y la degradación
+del mismo.
 
 
 ### Escenario
 
-Exponer el sistema al una carga baja para observar los parámetros (RPS, duración de cada request, etc). Además
+Exponer el sistema a una carga baja para observar los parámetros (RPS, duración de cada request, etc). Además
 esta prueba se realizará en los distintos endpoints de interés con y sin concurrencia (conexiones en simultáneo).
 
 
@@ -67,6 +67,7 @@ al único cliente.
 
 Este escenario es ideal para observar los parámetros normales de Node en el ambiente de pruebas.
 
+<<Insert gráficos aqui>>
 
 ### Node con concurrencia
 
@@ -78,11 +79,14 @@ Este escenario es más interesante, ya que los clientes comienzan a competir por
    Es por esto que se observará un incremento lineal del tiempo de respuesta con respecto a la cantidad de
    clientes. Esto es porque el N-ésimo cliente debe esperar a que finalicen los N-1 clientes anteriores.
 
+<<Insert gráficos aqui>>
+
 
 ### Gunicorn sin concurrencia
 
-Al igual que el mismo caso en Node, no debe observarse ninguna anomalía.
+Mismo caso que Node, no debería observarse ninguna anomalía.
 
+<<Insert gráficos aqui>>
 
 ### Gunicorn con concurrencia
 
@@ -91,16 +95,16 @@ Al igual que el mismo caso en Node, no debe observarse ninguna anomalía.
  - `/intensive` la degradación debería ser menor que la de node ya que los workers (procesos) de gurnicorn deberían
    poder repartirse la carga entre ellos (distintos cores).
 
+<<Insert gráficos aqui>>
 
-## Reliability y availability
+## Reliability, availability
 
-Se desea detectar los límites del sistema en el entorno de pruebas, entendiendo por *límite* la carga que soporta sin
-degradar el servicio o no poder brindarlo. De esta forma podremos evaluar bajo que escenarios el sistema continua
-funcionando.
+Se desea detectar dos limites distintos del sistema, el primero, el punto en le cual el servicio comienza a degradarse (podría ser un rango)
+u el segundo, el punto en el cual el servicio dejo de funcionar en su totalidad.
 
 Pordría considerarse que Node pierde disponibilidad cuando un proceso es CPU intensivo y bloquea el event loop porque
 ningún otro request va a poder ser atendido. Gunicorn puede continuar atendiendo clientes ya que es multi-proceso
-(mientras no se ocupen todos lo procesos)
+(mientras no se ocupen todos lo threads)
 
 
 ### Escenario
@@ -109,11 +113,13 @@ Crear una carga creciente para los dintintos endpoints hasta detectar el momento
 funcionar de forma inesperada (es decir, los parámetros observados no corresponden a los de un escenario de carga
 baja):
 
- - `/` no debería ser fácil ya que los requests no hacen nada.
- - `/timeout` debería ser dificil también, aunque es posible que se alcancen otros límites como la cantidad de
+ - `/` no debería ser fácil detectar una degradación en el servicio, mucho menos lograr *tirarlo* ya que los requests no requieren practicamente procesamiento.
+ - `/timeout` debería ser dificil también detectar una degradación o perdida de servicio, aunque es posible que se alcancen otros límites como la cantidad de
    sockets o de RAM al tener tantas conexiones abiertas al mismo tiempo.
  - `/intensive` la degradación debería notarse rapidamente. En el caso de Node, se bloquearía el servidor con 1 
    solo request. En el caso de Gunicorn es esperable que maneje un request por core.
+
+<<Insert gráficos aqui>>
 
 
 ## Scalability
