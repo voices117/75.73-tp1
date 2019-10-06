@@ -14,16 +14,22 @@ config:
           host: localhost
           port: 8125
           prefix: "artillery-gunicorn"
+    gunicorn_multi:
+      target: 'http://localhost:5555/gunicorn_multi'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-gunicorn_multi"
 
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 
   phases:
-    - duration: 60
-      arrivalRate: 10
-      rampTo: 600
+    - duration: 20
+      arrivalRate: 5
 
 scenarios:
-  - name: ping
+  - name: normal
     flow:
     - get:
-        url: "/"
+        url: "/intensive"

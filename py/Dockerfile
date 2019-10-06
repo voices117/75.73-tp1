@@ -7,4 +7,4 @@ RUN pip install flask gunicorn
 
 COPY app.py ./
 
-ENTRYPOINT ["gunicorn", "app:app", "-b 0.0.0.0:4000"]
+ENTRYPOINT ["gunicorn", "app:app"]
