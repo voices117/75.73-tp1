@@ -7,6 +7,11 @@ services:
     node:
         build: ./js
 
+    bbox:
+        image: arqsoft/bbox:201902.1
+        volumes:
+            - ./bbox/config.properties:/opt/bbox/config.properties
+
     nginx:
         image: nginx:1.17.3
         ports:
@@ -17,6 +22,7 @@ services:
         links:
             - gunicorn
             - node
+            - bbox
 
     graphite:
         image: graphiteapp/graphite-statsd:1.1.5-12
