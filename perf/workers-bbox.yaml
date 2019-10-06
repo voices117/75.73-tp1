@@ -20,9 +20,9 @@ config:
 
   phases:
     - name: Ramp
-      duration: 120
+      duration: 180
       arrivalRate: 1
-      rampTo: 50
+      rampTo: 100
     
 
 scenarios:
