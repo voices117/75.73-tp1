@@ -1,0 +1,217 @@
+
+> perf@1.0.0 artillery /home/tg/fiuba/75.73-tp1/perf
+> artillery "run" "workers-bbox.yaml" "-e" "bbox-1"
+
+Started phase 0 (Ramp), duration: 120s @ 12:02:56(-0300) 2019-10-06
+Report @ 12:03:06(-0300) 2019-10-06
+Elapsed time: 10 seconds
+  Scenarios launched:  30
+  Scenarios completed: 26
+  Requests completed:  26
+  RPS sent: 3.75
+  Request latency:
+    min: 652.3
+    max: 660
+    median: 653.4
+    p95: 655.9
+    p99: 660
+  Codes:
+    200: 26
+
+Report @ 12:03:16(-0300) 2019-10-06
+Elapsed time: 20 seconds
+  Scenarios launched:  87
+  Scenarios completed: 82
+  Requests completed:  82
+  RPS sent: 8.7
+  Request latency:
+    min: 651.6
+    max: 674.3
+    median: 652.7
+    p95: 656.7
+    p99: 673.6
+  Codes:
+    200: 82
+
+Report @ 12:03:26(-0300) 2019-10-06
+Elapsed time: 30 seconds
+  Scenarios launched:  99
+  Scenarios completed: 101
+  Requests completed:  101
+  RPS sent: 9.94
+  Request latency:
+    min: 651.8
+    max: 675.9
+    median: 652.8
+    p95: 657.5
+    p99: 667.7
+  Codes:
+    200: 101
+
+Report @ 12:03:36(-0300) 2019-10-06
+Elapsed time: 40 seconds
+  Scenarios launched:  163
+  Scenarios completed: 158
+  Requests completed:  158
+  RPS sent: 16.45
+  Request latency:
+    min: 651.4
+    max: 678.4
+    median: 652
+    p95: 653.7
+    p99: 677.4
+  Codes:
+    200: 158
+
+Report @ 12:03:46(-0300) 2019-10-06
+Elapsed time: 50 seconds
+  Scenarios launched:  196
+  Scenarios completed: 192
+  Requests completed:  192
+  RPS sent: 19.6
+  Request latency:
+    min: 651.4
+    max: 694.4
+    median: 652.1
+    p95: 654.3
+    p99: 676.5
+  Codes:
+    200: 192
+
+Report @ 12:03:56(-0300) 2019-10-06
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  235
+  Scenarios completed: 235
+  Requests completed:  235
+  RPS sent: 23.52
+  Request latency:
+    min: 651.4
+    max: 677.4
+    median: 652.5
+    p95: 654.1
+    p99: 656.7
+  Codes:
+    200: 235
+
+Report @ 12:04:06(-0300) 2019-10-06
+Elapsed time: 1 minute, 10 seconds
+  Scenarios launched:  277
+  Scenarios completed: 274
+  Requests completed:  274
+  RPS sent: 27.87
+  Request latency:
+    min: 651.2
+    max: 711.7
+    median: 652.2
+    p95: 653.5
+    p99: 670.7
+  Codes:
+    200: 274
+
+Report @ 12:04:16(-0300) 2019-10-06
+Elapsed time: 1 minute, 20 seconds
+  Scenarios launched:  323
+  Scenarios completed: 320
+  Requests completed:  320
+  RPS sent: 32.33
+  Request latency:
+    min: 651.1
+    max: 732.5
+    median: 652.1
+    p95: 654
+    p99: 680.3
+  Codes:
+    200: 320
+
+Report @ 12:04:26(-0300) 2019-10-06
+Elapsed time: 1 minute, 30 seconds
+  Scenarios launched:  377
+  Scenarios completed: 370
+  Requests completed:  370
+  RPS sent: 37.7
+  Request latency:
+    min: 651.1
+    max: 686.5
+    median: 651.9
+    p95: 653.7
+    p99: 657.2
+  Codes:
+    200: 370
+
+Report @ 12:04:36(-0300) 2019-10-06
+Elapsed time: 1 minute, 40 seconds
+  Scenarios launched:  415
+  Scenarios completed: 416
+  Requests completed:  416
+  RPS sent: 41.46
+  Request latency:
+    min: 651
+    max: 712.7
+    median: 651.4
+    p95: 652.9
+    p99: 676.1
+  Codes:
+    200: 416
+
+Report @ 12:04:46(-0300) 2019-10-06
+Elapsed time: 1 minute, 50 seconds
+  Scenarios launched:  437
+  Scenarios completed: 433
+  Requests completed:  433
+  RPS sent: 43.7
+  Request latency:
+    min: 651.1
+    max: 727
+    median: 651.7
+    p95: 653.4
+    p99: 671
+  Codes:
+    200: 433
+
+Report @ 12:04:56(-0300) 2019-10-06
+Elapsed time: 2 minutes, 0 seconds
+  Scenarios launched:  479
+  Scenarios completed: 479
+  Requests completed:  479
+  RPS sent: 47.85
+  Request latency:
+    min: 651
+    max: 722.9
+    median: 651.7
+    p95: 654.2
+    p99: 684.6
+  Codes:
+    200: 479
+
+Report @ 12:04:58(-0300) 2019-10-06
+Elapsed time: 2 minutes, 2 seconds
+  Scenarios launched:  44
+  Scenarios completed: 76
+  Requests completed:  76
+  RPS sent: 23.53
+  Request latency:
+    min: 651
+    max: 655.3
+    median: 651.5
+    p95: 652.7
+    p99: 655.3
+  Codes:
+    200: 76
+
+All virtual users finished
+Summary report @ 12:04:58(-0300) 2019-10-06
+  Scenarios launched:  3162
+  Scenarios completed: 3162
+  Requests completed:  3162
+  RPS sent: 26.34
+  Request latency:
+    min: 651
+    max: 732.5
+    median: 651.9
+    p95: 653.9
+    p99: 670.2
+  Scenario counts:
+    root (/): 3162 (100%)
+  Codes:
+    200: 3162
+
