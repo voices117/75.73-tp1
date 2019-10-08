@@ -30,18 +30,7 @@ config:
       rampTo: 120
 
 scenarios:
-  - name: "intensive"
-    weight: 5
-    flow:
-    - get:
-        url: "/intensive"
   - name: "timeout"
-    weight: 40
     flow:
     - get:
         url: "/timeout"
-  - name: "ping"
-    weight: 55
-    flow:
-    - get:
-        url: "/"

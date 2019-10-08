@@ -1,0 +1,293 @@
+> perf@1.0.0 artillery /media/ext/axl/documents/fiuba/7573.arq/tp1/75.73-tp1/perf
+> artillery "run" "performance_intensive.yaml" "-e" "gunicorn_multi"
+
+Started phase 0, duration: undefineds @ 01:53:46(-0300) 2019-10-08
+Started phase 1 (Ramp), duration: 30s @ 01:53:51(-0300) 2019-10-08
+Report @ 01:53:56(-0300) 2019-10-08
+Elapsed time: 10 seconds
+  Scenarios launched:  19
+  Scenarios completed: 0
+  Requests completed:  0
+  RPS sent: 4.4
+  Request latency:
+    min: NaN
+    max: NaN
+    median: NaN
+    p95: NaN
+    p99: NaN
+
+Report @ 01:54:06(-0300) 2019-10-08
+Elapsed time: 20 seconds
+  Scenarios launched:  109
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: 10.9
+  Request latency:
+    min: 5002.8
+    max: 9487.7
+    median: 6433.7
+    p95: 9487.7
+    p99: 9487.7
+  Codes:
+    200: 8
+
+Report @ 01:54:16(-0300) 2019-10-08
+Elapsed time: 30 seconds
+  Scenarios launched:  243
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: 24.42
+  Request latency:
+    min: 10955.9
+    max: 18739.6
+    median: 13553.4
+    p95: 18739.6
+    p99: 18739.6
+  Codes:
+    200: 8
+
+Started phase 2 (Plain), duration: 60s @ 01:54:21(-0300) 2019-10-08
+Report @ 01:54:26(-0300) 2019-10-08
+Elapsed time: 40 seconds
+  Scenarios launched:  335
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: 33.67
+  Request latency:
+    min: 16983.3
+    max: 27635.1
+    median: 22718.2
+    p95: 27635.1
+    p99: 27635.1
+  Codes:
+    200: 8
+  Errors:
+    ECONNRESET: 171
+
+Warning: 
+CPU usage of Artillery seems to be very high (pids: 12523)
+which may severely affect its performance.
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 01:54:36(-0300) 2019-10-08
+Elapsed time: 50 seconds
+  Scenarios launched:  350
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: 35.04
+  Request latency:
+    min: 25163
+    max: 37266.6
+    median: 31808.3
+    p95: 37266.6
+    p99: 37266.6
+  Codes:
+    200: 8
+  Errors:
+    ECONNRESET: 341
+
+Report @ 01:54:46(-0300) 2019-10-08
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  350
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: 34.93
+  Request latency:
+    min: 33428.2
+    max: 47104.7
+    median: 40711.6
+    p95: 47104.7
+    p99: 47104.7
+  Codes:
+    200: 8
+  Errors:
+    ECONNRESET: 342
+
+Report @ 01:54:56(-0300) 2019-10-08
+Elapsed time: 1 minute, 10 seconds
+  Scenarios launched:  350
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: 35.24
+  Request latency:
+    min: 42373.6
+    max: 56472.6
+    median: 49973.7
+    p95: 56472.6
+    p99: 56472.6
+  Codes:
+    200: 8
+  Errors:
+    ECONNRESET: 343
+
+Warning: High CPU usage warning (pids: 12523).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 01:55:06(-0300) 2019-10-08
+Elapsed time: 1 minute, 20 seconds
+  Scenarios launched:  350
+  Scenarios completed: 80
+  Requests completed:  80
+  RPS sent: 35
+  Request latency:
+    min: 52059.1
+    max: 60047.2
+    median: 60003.1
+    p95: 60012
+    p99: 60046.7
+  Codes:
+    200: 4
+    504: 76
+  Errors:
+    ECONNRESET: 271
+
+Warning: High CPU usage warning (pids: 12523).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Report @ 01:55:16(-0300) 2019-10-08
+Elapsed time: 1 minute, 30 seconds
+  Scenarios launched:  350
+  Scenarios completed: 243
+  Requests completed:  243
+  RPS sent: 35
+  Request latency:
+    min: 59997.5
+    max: 60036.9
+    median: 60004.4
+    p95: 60017.9
+    p99: 60023.8
+  Codes:
+    504: 243
+  Errors:
+    ECONNRESET: 106
+
+Warning: High CPU usage warning (pids: 12523).
+See https://artillery.io/docs/faq/#high-cpu-warnings for details.
+
+Started phase 3, duration: undefineds @ 01:55:21(-0300) 2019-10-08
+Report @ 01:55:26(-0300) 2019-10-08
+Elapsed time: 1 minute, 40 seconds
+  Scenarios launched:  176
+  Scenarios completed: 164
+  Requests completed:  164
+  RPS sent: 17.74
+  Request latency:
+    min: 59998.3
+    max: 60069.1
+    median: 60004.3
+    p95: 60044.3
+    p99: 60056.3
+  Codes:
+    504: 164
+  Errors:
+    ECONNRESET: 19
+
+Report @ 01:55:36(-0300) 2019-10-08
+Elapsed time: 1 minute, 50 seconds
+  Scenarios launched:  0
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: NaN
+  Request latency:
+    min: 59998.9
+    max: 60007.3
+    median: 60002.4
+    p95: 60007.3
+    p99: 60007.3
+  Codes:
+    504: 8
+
+Report @ 01:55:46(-0300) 2019-10-08
+Elapsed time: 2 minutes, 0 seconds
+  Scenarios launched:  0
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: NaN
+  Request latency:
+    min: 59999.9
+    max: 60009.1
+    median: 60003.6
+    p95: 60009.1
+    p99: 60009.1
+  Codes:
+    504: 8
+
+Report @ 01:55:56(-0300) 2019-10-08
+Elapsed time: 2 minutes, 10 seconds
+  Scenarios launched:  0
+  Scenarios completed: 8
+  Requests completed:  8
+  RPS sent: NaN
+  Request latency:
+    min: 60002.4
+    max: 60042.5
+    median: 60004.1
+    p95: 60042.5
+    p99: 60042.5
+  Codes:
+    504: 8
+
+Report @ 01:56:06(-0300) 2019-10-08
+Elapsed time: 2 minutes, 20 seconds
+  Scenarios launched:  0
+  Scenarios completed: 79
+  Requests completed:  79
+  RPS sent: NaN
+  Request latency:
+    min: 59997.8
+    max: 60012.6
+    median: 60003.6
+    p95: 60008.7
+    p99: 60011.6
+  Codes:
+    504: 79
+
+Report @ 01:56:16(-0300) 2019-10-08
+Elapsed time: 2 minutes, 30 seconds
+  Scenarios launched:  0
+  Scenarios completed: 244
+  Requests completed:  244
+  RPS sent: NaN
+  Request latency:
+    min: 59997.9
+    max: 60014.4
+    median: 60003.3
+    p95: 60007.1
+    p99: 60010.2
+  Codes:
+    504: 244
+
+Report @ 01:56:21(-0300) 2019-10-08
+Elapsed time: 2 minutes, 35 seconds
+  Scenarios launched:  0
+  Scenarios completed: 157
+  Requests completed:  157
+  RPS sent: NaN
+  Request latency:
+    min: 59997.5
+    max: 60013.9
+    median: 60003.2
+    p95: 60008
+    p99: 60013.2
+  Codes:
+    504: 157
+
+All virtual users finished
+Summary report @ 01:56:21(-0300) 2019-10-08
+  Scenarios launched:  2632
+  Scenarios completed: 1039
+  Requests completed:  1039
+  RPS sent: 17.61
+  Request latency:
+    min: 5002.8
+    max: 60069.1
+    median: 60003.6
+    p95: 60013.8
+    p99: 60044
+  Scenario counts:
+    intensive: 2632 (100%)
+  Codes:
+    200: 52
+    504: 987
+  Errors:
+    ECONNRESET: 1593

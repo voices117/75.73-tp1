@@ -25,23 +25,18 @@ config:
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 
   phases:
-    - duration: 60
-      arrivalRate: 10
-      rampTo: 120
+    - pause: 5
+    - name: Ramp
+      duration: 30
+      arrivalRate: 1
+      rampTo: 35
+    - name: Plain
+      duration: 60
+      arrivalRate: 35
+    - pause: 20
 
 scenarios:
-  - name: "intensive"
-    weight: 5
-    flow:
-    - get:
-        url: "/intensive"
   - name: "timeout"
-    weight: 40
     flow:
     - get:
         url: "/timeout"
-  - name: "ping"
-    weight: 55
-    flow:
-    - get:
-        url: "/"
