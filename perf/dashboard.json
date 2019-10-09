@@ -492,9 +492,14 @@
             "selected": false,
             "text": "artillery-gunicorn_multi",
             "value": "artillery-gunicorn_multi"
+          },
+          {
+            "selected": false,
+            "text": "artillery-gunicorn_gevent",
+            "value": "artillery-gunicorn_gevent"
           }
         ],
-        "query": "artillery-node, artillery-gunicorn, artillery-gunicorn_multi",
+        "query": "artillery-node, artillery-gunicorn, artillery-gunicorn_multi, artillery-gunicorn_gevent",
         "type": "custom"
       },
       {
@@ -551,11 +556,16 @@
           },
           {
             "selected": false,
+            "text": "7573-tp1_gunicorn_gevent_1",
+            "value": "7573-tp1_gunicorn_gevent_1"
+          },
+          {
+            "selected": false,
             "text": "7573-tp1_nginx_1",
             "value": "7573-tp1_nginx_1"
           }
         ],
-        "query": "7573-tp1_node_1, 7573-tp1_node_2, 7573-tp1_node_3, 7573-tp1_cadvisor_1, 7573-tp1_grafana_1, 7573-tp1_graphite_1, 7573-tp1_gunicorn_1, 7573-tp1_gunicorn_multi_1, 7573-tp1_nginx_1",
+        "query": "7573-tp1_node_1, 7573-tp1_node_2, 7573-tp1_node_3, 7573-tp1_cadvisor_1, 7573-tp1_grafana_1, 7573-tp1_graphite_1, 7573-tp1_gunicorn_1, 7573-tp1_gunicorn_multi_1, 7573-tp1_gunicorn_gevent_1, 7573-tp1_nginx_1",
         "type": "custom"
       }
     ]

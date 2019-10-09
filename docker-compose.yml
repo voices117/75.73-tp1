@@ -8,6 +8,12 @@ services:
     gunicorn_multi:
         build: ./py
         command: "--workers=4 -b 0.0.0.0:5000"
+
+    gunicorn_gevent:
+        build:
+            context: ./py
+            dockerfile: ../gunicorn_gevent/Dockerfile
+        command: "--workers=3 -b 0.0.0.0:5001 --worker-class=gevent"
         
     node:
         build: ./js
@@ -26,6 +32,7 @@ services:
             - ./nginx_main_workers_config.conf:/etc/nginx/nginx.conf
             - ./store/static/files:/static:ro
         links:
+            - gunicorn_gevent
             - gunicorn_multi
             - gunicorn
             - node
